@@ -1,4 +1,4 @@
-#BMI
+# 1.BMI
 meters = float(input("Enter height in meters: "))
 kilo = float(input("Enter weight in kilograms: "))
 
@@ -17,7 +17,7 @@ else:
 
 
 
-# List of cities
+#  2.List of cities
 Australia = ["Sydney", "Melbourne", "Brisbane", "Perth"]
 UAE = ["Dubai", "Abu Dhabi", "Sharjah", "Ajman"]
 India = ["Mumbai", "Bangalore", "Chennai", "Delhi"]
