@@ -34,3 +34,22 @@ elif city in India:
     print("The city belongs to India.")
 else:
     print("City not found in the list.")
+
+# 3.list of cities for each country
+Australia = ["Sydney", "Melbourne", "Brisbane"]
+India = ["Mumbai", "Delhi", "Bangalore", "Chennai"]
+UAE = ["Dubai", "Abu Dhabi", "Sharjah"]
+
+# Get input from the user
+city1 = input("Enter the first city: ")
+city2 = input("Enter the second city: ")
+
+# Check if both cities belong to the same country
+if city1 in Australia and city2 in Australia:
+    print("Both cities are in Australia")
+elif city1 in India and city2 in India:
+    print("Both cities are in India")
+elif city1 in UAE and city2 in UAE:
+    print("Both cities are in UAE")
+else:
+    print("They don't belong to the same country")
