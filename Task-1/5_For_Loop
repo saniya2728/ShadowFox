@@ -1,0 +1,34 @@
+import random
+
+# Variables to keep track of counts
+count_6 = 0
+count_1 = 0
+count_double_6 = 0
+previous_roll = None # We start with no previous roll
+
+print("--- Rolling the die 20 times ---")
+
+for i in range(20):
+    # Roll a random number between 1 and 6
+    roll = random.randint(1, 6)
+    print(f"Roll {i+1}: {roll}")
+    
+    # 1. Count if it is a 6
+    if roll == 6:
+        count_6 += 1
+        # Check if the previous one was also a 6
+        if previous_roll == 6:
+            count_double_6 += 1
+            
+    # 2. Count if it is a 1
+    if roll == 1:
+        count_1 += 1
+        
+    # Remember this roll for the next time the loop runs
+    previous_roll = roll
+
+# Final Results
+print("\n--- Results ---")
+print("Total 6s:", count_6)
+print("Total 1s:", count_1)
+print("Two 6s in a row:", count_double_6)
