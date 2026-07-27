@@ -1,0 +1,18 @@
+import requests
+from bs4 import BeautifulSoup
+
+# Step 1: Target URL
+url = "http://quotes.toscrape.com"
+
+# Step 2: Send Request
+response = requests.get(url )
+
+# Step 3: Parse the HTML
+soup = BeautifulSoup(response.text, "html.parser")
+
+# Step 4: Find and Print Quotes
+print("--- Scraped Quotes ---")
+quotes = soup.find_all("span", class_="text")
+
+for i, quote in enumerate(quotes, 1):
+    print(f"{i}. {quote.text}")
