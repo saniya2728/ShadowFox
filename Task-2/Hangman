@@ -1,0 +1,31 @@
+import random
+
+
+words = ["python", "intern", "coding"]
+word = random.choice(words)
+lives = 5
+display = ["_"] * len(word)
+
+print("Welcome to Hangman!")
+
+
+while "_" in display and lives > 0:
+    print(" ".join(display))
+    print("Lives left:", lives)
+    
+    guess = input("Guess a letter: ")
+    
+    
+    if guess in word:
+        for i in range(len(word)):
+            if word[i] == guess:
+                display[i] = guess
+    else:
+        lives = lives - 1
+        print("Wrong guess!")
+
+
+if "_" not in display:
+    print("You won! The word was:", word)
+else:
+    print("Game over! The word was:", word)
